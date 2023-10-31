@@ -1,0 +1,17 @@
+C:\Users\Asus\source\repos\FilesProcess\FilesProcess\obj\Debug\net6.0-windows\FilesProcess.csproj.AssemblyReference.cache
+C:\Users\Asus\source\repos\FilesProcess\FilesProcess\obj\Debug\net6.0-windows\FilesProcess.Form1.resources
+C:\Users\Asus\source\repos\FilesProcess\FilesProcess\obj\Debug\net6.0-windows\FilesProcess.csproj.GenerateResource.cache
+C:\Users\Asus\source\repos\FilesProcess\FilesProcess\obj\Debug\net6.0-windows\FilesProcess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\source\repos\FilesProcess\FilesProcess\obj\Debug\net6.0-windows\FilesProcess.AssemblyInfoInputs.cache
+C:\Users\Asus\source\repos\FilesProcess\FilesProcess\obj\Debug\net6.0-windows\FilesProcess.AssemblyInfo.cs
+C:\Users\Asus\source\repos\FilesProcess\FilesProcess\obj\Debug\net6.0-windows\FilesProcess.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\FilesProcess\FilesProcess\bin\Debug\net6.0-windows\FilesProcess.exe
+C:\Users\Asus\source\repos\FilesProcess\FilesProcess\bin\Debug\net6.0-windows\FilesProcess.deps.json
+C:\Users\Asus\source\repos\FilesProcess\FilesProcess\bin\Debug\net6.0-windows\FilesProcess.runtimeconfig.json
+C:\Users\Asus\source\repos\FilesProcess\FilesProcess\bin\Debug\net6.0-windows\FilesProcess.dll
+C:\Users\Asus\source\repos\FilesProcess\FilesProcess\bin\Debug\net6.0-windows\FilesProcess.pdb
+C:\Users\Asus\source\repos\FilesProcess\FilesProcess\obj\Debug\net6.0-windows\FilesProcess.dll
+C:\Users\Asus\source\repos\FilesProcess\FilesProcess\obj\Debug\net6.0-windows\refint\FilesProcess.dll
+C:\Users\Asus\source\repos\FilesProcess\FilesProcess\obj\Debug\net6.0-windows\FilesProcess.pdb
+C:\Users\Asus\source\repos\FilesProcess\FilesProcess\obj\Debug\net6.0-windows\FilesProcess.genruntimeconfig.cache
+C:\Users\Asus\source\repos\FilesProcess\FilesProcess\obj\Debug\net6.0-windows\ref\FilesProcess.dll
