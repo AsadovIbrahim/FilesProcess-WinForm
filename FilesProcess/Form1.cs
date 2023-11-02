@@ -2,30 +2,17 @@
 {
     public partial class Form1 : Form
     {
+        private System.Windows.Forms.Timer progressBarTimer;
+
+
         private Thread copyThread;
         private bool isSuspended = false;
         private bool isAborted = false;
-        private System.Windows.Forms.Timer progressBarTimer;
-        private int progressBarValue = 0;
 
         public Form1()
         {
             InitializeComponent();
-            progressBarTimer = new System.Windows.Forms.Timer();
-            progressBarTimer.Interval = 150; 
-            progressBarTimer.Tick += new EventHandler(progressBarTimer_Tick);
-        }
-        private void progressBarTimer_Tick(object sender, EventArgs e)
-        {
-            if (progressBarValue < 100)
-            {
-                progressBarValue++;
-                progressBar1.Value = progressBarValue;
-            }
-            else
-            {
-                progressBarTimer.Stop();
-            }
+           
         }
 
         private void toFileButton_Click(object sender, EventArgs e)
@@ -51,17 +38,28 @@
         }
         private void suspendButton_Click(object sender, EventArgs e)
         {
-            isSuspended = true;
+
+            if (copyThread != null && copyThread.ThreadState == ThreadState.Running)
+            {
+                copyThread.Suspend();
+            }
         }
+
 
         private void resumeButton_Click(object sender, EventArgs e)
         {
-            isSuspended = false;
+            if (copyThread != null && copyThread.ThreadState == ThreadState.Suspended)
+            {
+                copyThread.Resume();
+            }
         }
 
         private void abortButton_Click(object sender, EventArgs e)
         {
-            isAborted = true;
+            if (copyThread != null && copyThread.ThreadState != ThreadState.Stopped)
+            {
+                copyThread.Abort();
+            }
         }
 
         private void copyButton_Click(object sender, EventArgs e)
@@ -73,6 +71,7 @@
             {
                 copyThread = new Thread(() => CopyFile(filePath, destionationPath));
                 copyThread.Start();
+
             }
         }
 
@@ -93,7 +92,7 @@
                         {
                             if (isSuspended)
                             {
-                                Thread.Sleep(100); // İşlemi beklet
+                                Thread.Sleep(100);
                                 continue;
                             }
 
@@ -109,13 +108,14 @@
                             // Progress barı güncelle
                             int progress = (int)(((double)totalBytesRead / totalBytes) * 100);
                             UpdateProgressBar(progress);
+                            Thread.Sleep(2000);
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                // Hata yönetimi
+                MessageBox.Show(ex.Message);
             }
         }
         private void UpdateProgressBar(int value)
